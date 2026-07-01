@@ -1,204 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Saveiro - Flashcards</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      perspective: 1000px;
-    }
-
-    .inner {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-      cursor: pointer;
-    }
-
-    .card:hover .inner {
-      transform: rotateY(180deg);
-    }
-
-    .front, .back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      backface-visibility: hidden;
-      padding: 15px;
-      box-sizing: border-box;
-    }
-
-    /* FRENTE */
-    .front {
-      background: #1e88e5;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 10px;
-    }
-
-    .front img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* VERSO */
-    .back {
-      background: white;
-      transform: rotateY(180deg);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      font-size: 14px;
-    }
-
-    .status {
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .true {
-      color: green;
-    }
-
-    .false {
-      color: red;
-    }
-
-    .question {
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Conecta Aí</title>
 </head>
-
 <body>
+    <header class="cabecalho">
+        <h1>Confere Aí</h1>
+        <nav>
+            <a href="#" class="cabecalho-link">Inicio</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Descubra a verdade passando o mouse</h2>
+        <section>
+        <article class="cartao">
+            <div class="cartao-interno">
+                <div class="cartao-frente">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem">
+                    <p>Pinguins conseguem voar como pássaros!</p>
+                </div>
+                <div class="cartao-verso">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim"  class="cartao-imagem">
+                    <p>Pinguins não voam, mas são excelentes nadadores.</p>
+                </div>
+            </div>
+        </article>
+<article class="cartao">
+            <div class="cartao-interno">
+                <div class="cartao-frente">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem">
+                    <p>Pinguins conseguem voar como pássaros!</p>
+                </div>
+                <div class="cartao-verso">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim"  class="cartao-imagem">
+                    <p>Pinguins não voam, mas são excelentes nadadores.</p>
+                </div>
+            </div>
+        </article>
 
-<h1>Saveiro - Flashcards</h1>
-
-<div class="container">
-
-  <!-- 1 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=Saveiro" alt="Saveiro">
-        <div>A Saveiro é derivada do Volkswagen Gol?</div>
-      </div>
-      <div class="back">
-        <div class="status true">VERDADEIRO</div>
-        <div>Sim.</div>
-        <div>Ela compartilha a plataforma e vários componentes com o Volkswagen Gol.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=Motor" alt="Motor">
-        <div>A Saveiro tem motor V6?</div>
-      </div>
-      <div class="back">
-        <div class="status false">FALSO</div>
-        <div>Não.</div>
-        <div>Ela usa motores 1.6 flex, não possui versão V6.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=Carga" alt="Carga">
-        <div>Ela é usada para trabalho urbano?</div>
-      </div>
-      <div class="back">
-        <div class="status true">VERDADEIRO</div>
-        <div>Sim.</div>
-        <div>É muito usada por comerciantes e empresas para transporte leve.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=Cabine" alt="Cabine">
-        <div>Não existem versões cabine estendida?</div>
-      </div>
-      <div class="back">
-        <div class="status false">FALSO</div>
-        <div>Errado.</div>
-        <div>A Saveiro possui versões cabine simples e estendida.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=VW" alt="VW">
-        <div>Ela é fabricada pela Volkswagen no Brasil?</div>
-      </div>
-      <div class="back">
-        <div class="status true">VERDADEIRO</div>
-        <div>Sim.</div>
-        <div>É produzida pela Volkswagen no mercado brasileiro há décadas.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6 -->
-  <div class="card">
-    <div class="inner">
-      <div class="front">
-        <img src="https://via.placeholder.com/400x170?text=Eletrica" alt="Elétrica">
-        <div>A Saveiro é um veículo elétrico?</div>
-      </div>
-      <div class="back">
-        <div class="status false">FALSO</div>
-        <div>Não.</div>
-        <div>Até hoje não existe versão elétrica da Saveiro, apenas combustão.</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
+        </section>
+    </main>
+    <footer>
+        <p>Projeto feito por Moni</p>
+    </footer>
 </body>
 </html>
